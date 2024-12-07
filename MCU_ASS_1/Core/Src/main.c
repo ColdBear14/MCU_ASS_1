@@ -109,6 +109,9 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  SCH_Add_Task(getKeyInput, 100, 10);
+  SCH_Add_Task(fsm_automatic_run, 100, 1000);
+  SCH_Add_Task(fsm_mode, 100, 1000);
   while (1)
   {
     /* USER CODE END WHILE */
