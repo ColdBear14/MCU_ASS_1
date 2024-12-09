@@ -23,21 +23,21 @@ void fsm_mode(){
 	case MODE1:
 		if(IsButtonPress(0)==1){
 			statusMode=MODE2;
+			status_A = 0;
+			status_B = 0;
 		}
 		break;
 	case MODE2:
 		statusModeTraffic();
-		status_A = 0;
-		status_B = 0;
+
 		if(IsButtonPress(0)==1){
 			statusMode=MODE3;
 			temp=0;
+			lcd_clear_display();
+
 		}
 		if(IsButtonPress(1)==1){
 			temp+=1;
-		}
-		if(IsButtonLongPress(1)==1){
-			temp-=1;
 		}
 		if(IsButtonPress(2)==1){
 			RED_timer+=temp;
@@ -50,12 +50,11 @@ void fsm_mode(){
 		if(IsButtonPress(0)==1){
 			statusMode=MODE4;
 			temp=0;
+			lcd_clear_display();
+
 		}
 		if(IsButtonPress(1)==1){
 			temp+=1;
-		}
-		if(IsButtonLongPress(1)==1){
-			temp-=1;
 		}
 		if(IsButtonPress(2)==1){
 			GREEN_timer+=temp;
@@ -70,12 +69,10 @@ void fsm_mode(){
 			statusMode=MODE1;
 			status_A = AUTO;
 			status_B = AUTO;
+			lcd_clear_display();
 		}
 		if(IsButtonPress(1)==1){
 			temp+=1;
-		}
-		if(IsButtonLongPress(1)==1){
-			temp-=1;
 		}
 		if(IsButtonPress(2)==1){
 			YELLOW_timer+=temp;

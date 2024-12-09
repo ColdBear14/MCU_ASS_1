@@ -41,13 +41,13 @@ void subKeyProcess(int index) {
 int getIndex(int index) {
 	switch(index){
 		case 0:
-			return HAL_GPIO_ReadPin(A0_GPIO_Port, A0_Pin);
+			return HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin);
 			break;
 		case 1:
-			return HAL_GPIO_ReadPin(A1_GPIO_Port, A1_Pin);
+			return HAL_GPIO_ReadPin(A0_GPIO_Port, A0_Pin);
 			break;
 		case 2:
-			return HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin);
+			return HAL_GPIO_ReadPin(A1_GPIO_Port, A1_Pin);
 			break;
 		default:
 			break;
@@ -78,7 +78,6 @@ void getKeyInput() {
 				if (TimerForKeyPress[i] == 0) {
 					//todo
 					button_long_flag[i] = 1;
-					TimerForKeyPress[i] = 300;
 					KeyReg3[i] = NORMAL_STATE;
 				}
 			}

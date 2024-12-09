@@ -27,9 +27,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/button.h ../Core/Inc/main.h ../Core/Inc/scheduler.h \
  ../Core/Inc/i2c_lcd.h ../Core/Inc/control_traffic.h ../Core/Inc/global.h \
- ../Core/Inc/button.h ../Core/Inc/fsm_automatic.h \
- ../Core/Inc/control_traffic.h ../Core/Inc/fsm_mode.h \
- ../Core/Inc/global.h ../Core/Inc/fsm_automatic.h ../Core/Inc/fsm_mode.h
+ ../Core/Inc/button.h ../Core/Inc/software_timer.h \
+ ../Core/Inc/fsm_automatic.h ../Core/Inc/control_traffic.h \
+ ../Core/Inc/fsm_mode.h ../Core/Inc/i2c_lcd.h ../Core/Inc/global.h \
+ ../Core/Inc/software_timer.h ../Core/Inc/fsm_automatic.h \
+ ../Core/Inc/fsm_mode.h ../Core/Inc/fsm_lcd.h
 
 ../Core/Inc/main.h:
 
@@ -99,14 +101,22 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 
 ../Core/Inc/button.h:
 
+../Core/Inc/software_timer.h:
+
 ../Core/Inc/fsm_automatic.h:
 
 ../Core/Inc/control_traffic.h:
 
 ../Core/Inc/fsm_mode.h:
 
+../Core/Inc/i2c_lcd.h:
+
 ../Core/Inc/global.h:
+
+../Core/Inc/software_timer.h:
 
 ../Core/Inc/fsm_automatic.h:
 
 ../Core/Inc/fsm_mode.h:
+
+../Core/Inc/fsm_lcd.h:

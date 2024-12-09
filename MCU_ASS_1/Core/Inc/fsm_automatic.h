@@ -19,8 +19,8 @@ extern int status_B;
 extern int count_Down_A;
 extern int count_Down_B;
 
-extern void fsm_automatic_run_A();
-extern void fsm_automatic_run_B();
+void fsm_automatic_run_A();
+void fsm_automatic_run_B();
 extern void fsm_automatic_run();
 
 #endif /* INC_FSM_AUTOMATIC_H_ */

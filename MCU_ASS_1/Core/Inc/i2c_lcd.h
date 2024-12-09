@@ -15,6 +15,7 @@ void lcd_send_cmd (char cmd);  // send command to the lcd
 void lcd_send_data (char data);  // send data to the lcd
 void lcd_send_string (char *str);  // send string to the lcd
 void lcd_clear_display (void);	//clear display lcd
+void lcd_display_value(int row, int col, int value);
 void lcd_goto_XY (int row, int col); //set proper location on screen
 
 #endif /* INC_I2C_LCD_H_ */

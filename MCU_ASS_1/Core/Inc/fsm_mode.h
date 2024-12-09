@@ -10,10 +10,13 @@
 
 #include "global.h"
 #include "control_traffic.h"
+#include "i2c_lcd.h"
+
 
 extern int RED_timer;
 extern int GREEN_timer;
 extern int YELLOW_timer;
+extern int temp;
 
 extern void fsm_mode();
 

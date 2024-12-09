@@ -9,6 +9,7 @@
 #define INC_GLOBAL_H_
 
 #include "button.h"
+#include "software_timer.h"
 
 #define INIT 0
 #define MODE1 1

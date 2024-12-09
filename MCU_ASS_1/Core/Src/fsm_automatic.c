@@ -23,6 +23,7 @@ void fsm_automatic_run_A() {
 	case AUTO:
 		status_A = AUTO_RED;
 		count_Down_A = RED_timer;
+		setTimer(0, 1000);
 		break;
 	case AUTO_RED:
 		statusTraffic_A();
@@ -30,7 +31,11 @@ void fsm_automatic_run_A() {
 			status_A = AUTO_GREEN;
 			count_Down_A = GREEN_timer;
 		}
-		count_Down_A--;
+		if(timer_flag[0] == 1){
+			count_Down_A--;
+			setTimer(0, 1000);
+		}
+		displayTraffic();
 		break;
 	case AUTO_GREEN:
 		statusTraffic_A();
@@ -38,7 +43,12 @@ void fsm_automatic_run_A() {
 			status_A = AUTO_YELLOW;
 			count_Down_A = YELLOW_timer;
 		}
-		count_Down_A--;
+		if(timer_flag[0] == 1){
+			count_Down_A--;
+			setTimer(0, 1000);
+		}
+		displayTraffic();
+
 		break;
 	case AUTO_YELLOW:
 		statusTraffic_A();
@@ -46,7 +56,12 @@ void fsm_automatic_run_A() {
 			status_A = AUTO_RED;
 			count_Down_A = RED_timer;
 		}
-		count_Down_A--;
+		if(timer_flag[0]==1){
+			count_Down_A--;
+			setTimer(0, 1000);
+		}
+		displayTraffic();
+
 		break;
 	default:
 		break;
@@ -58,6 +73,7 @@ void fsm_automatic_run_B() {
 	case AUTO:
 		status_B = AUTO_GREEN;
 		count_Down_B = GREEN_timer;
+		setTimer(1, 1000);
 		break;
 	case AUTO_RED:
 		statusTraffic_B();
@@ -65,8 +81,11 @@ void fsm_automatic_run_B() {
 			status_B = AUTO_GREEN;
 			count_Down_B = GREEN_timer;
 		}
+		if(timer_flag[1] == 1){
+			count_Down_B--;
+			setTimer(1, 1000);
+		}
 		displayTraffic();
-		count_Down_B--;
 		break;
 	case AUTO_GREEN:
 		statusTraffic_B();
@@ -74,17 +93,25 @@ void fsm_automatic_run_B() {
 			status_B = AUTO_YELLOW;
 			count_Down_B = YELLOW_timer;
 		}
+		if(timer_flag[1] == 1){
+			count_Down_B--;
+			setTimer(1, 1000);
+		}
 		displayTraffic();
-		count_Down_B--;
+
 		break;
 	case AUTO_YELLOW:
 		statusTraffic_B();
 		if (count_Down_B <= 0) {
-			status_B = AUTO_GREEN;
-			count_Down_B = GREEN_timer;
+			status_B = AUTO_RED;
+			count_Down_B = RED_timer;
+		}
+		if(timer_flag[1]==1){
+			count_Down_B--;
+			setTimer(1, 1000);
 		}
 		displayTraffic();
-		count_Down_B--;
+
 		break;
 	default:
 		break;

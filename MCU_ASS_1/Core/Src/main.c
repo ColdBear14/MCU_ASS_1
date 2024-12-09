@@ -27,8 +27,10 @@
 #include "i2c_lcd.h"
 #include "control_traffic.h"
 #include "global.h"
+#include "software_timer.h"
 #include "fsm_automatic.h"
 #include "fsm_mode.h"
+#include "fsm_lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,20 +106,23 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim2);
-  SCH_Init();
+  lcd_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  SCH_Add_Task(getKeyInput, 100, 10);
-  SCH_Add_Task(fsm_automatic_run, 100, 1000);
-  SCH_Add_Task(fsm_mode, 100, 1000);
+//  SCH_Add_Task(getKeyInput, 100, 10);
+//  SCH_Add_Task(fsm_automatic_run, 100, 1000);
+//  SCH_Add_Task(fsm_mode, 100, 1000);
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  SCH_Dispatch_Tasks();
+
+	  fsm_automatic_run();
+	  fsm_mode();
+	  fsm_lcd_run();
   }
   /* USER CODE END 3 */
 }
@@ -339,7 +344,8 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-SCH_Update();
+	timerun();
+	getKeyInput();
 }
 /* USER CODE END 4 */
 
