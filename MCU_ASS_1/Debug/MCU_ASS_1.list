@@ -1779,11 +1779,11 @@ int main(void)
  8000c5e:	f001 fff3 	bl	8002c48 <HAL_TIM_Base_Start_IT>
   lcd_init();
  8000c62:	f7ff ff5d 	bl	8000b20 <lcd_init>
+  while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
 	  fsm_automatic_run();
  8000c66:	f7ff fc8b 	bl	8000580 <fsm_automatic_run>
 	  fsm_mode();
