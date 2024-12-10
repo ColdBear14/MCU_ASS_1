@@ -25,6 +25,7 @@ void fsm_mode(){
 			statusMode=MODE2;
 			status_A = 0;
 			status_B = 0;
+			lcd_clear_display();
 		}
 		break;
 	case MODE2:

@@ -10,12 +10,38 @@
 void fsm_lcd_run(){
 	switch(statusMode){
 	case MODE1:
-		lcd_goto_XY(1, 0);
-		lcd_send_string("TIMER A:");
-		lcd_display_value(1, 9, count_Down_A);
-		lcd_goto_XY(2, 0);
-		lcd_send_string("TIMER B:");
-		lcd_display_value(2, 9, count_Down_B);
+		if(status_A == AUTO_RED){
+			lcd_goto_XY(1, 0);
+			lcd_send_string("RED A:");
+			if(count_Down_A == 0 ) lcd_clear_display();
+		}
+		if(status_A == AUTO_GREEN){
+			lcd_goto_XY(1, 0);
+			lcd_send_string("GREEN A:");
+			if(count_Down_A == 0 ) lcd_clear_display();
+		}
+		if(status_A == AUTO_YELLOW){
+			lcd_goto_XY(1, 0);
+			lcd_send_string("YELLOW A:");
+			if(count_Down_A == 0 ) lcd_clear_display();
+		}
+		if(status_B == AUTO_RED){
+			lcd_goto_XY(2, 0);
+			lcd_send_string("RED B:");
+			if(count_Down_B == 0 ) lcd_clear_display();
+		}
+		if(status_B == AUTO_GREEN){
+			lcd_goto_XY(2, 0);
+			lcd_send_string("GREEN B:");
+			if(count_Down_B == 0 ) lcd_clear_display();
+		}
+		if(status_B == AUTO_YELLOW){
+			lcd_goto_XY(2, 0);
+			lcd_send_string("YELLOW B:");
+			if(count_Down_B == 0 ) lcd_clear_display();
+		}
+		lcd_display_value(1, 10, count_Down_A);
+		lcd_display_value(2, 10, count_Down_B);
 
 		break;
 	case MODE2:
