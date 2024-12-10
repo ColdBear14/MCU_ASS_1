@@ -10,9 +10,12 @@
 void fsm_lcd_run(){
 	switch(statusMode){
 	case MODE1:
-
-		lcd_display_value(1, 1, count_Down_A);
-		lcd_display_value(2, 1, count_Down_B);
+		lcd_goto_XY(1, 0);
+		lcd_send_string("TIMER A:");
+		lcd_display_value(1, 9, count_Down_A);
+		lcd_goto_XY(2, 0);
+		lcd_send_string("TIMER B:");
+		lcd_display_value(2, 9, count_Down_B);
 
 		break;
 	case MODE2:

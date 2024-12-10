@@ -9,6 +9,7 @@ C_SRCS += \
 ../Core/Src/control_traffic.c \
 ../Core/Src/fsm_automatic.c \
 ../Core/Src/fsm_lcd.c \
+../Core/Src/fsm_manual.c \
 ../Core/Src/fsm_mode.c \
 ../Core/Src/global.c \
 ../Core/Src/i2c_lcd.c \
@@ -26,6 +27,7 @@ OBJS += \
 ./Core/Src/control_traffic.o \
 ./Core/Src/fsm_automatic.o \
 ./Core/Src/fsm_lcd.o \
+./Core/Src/fsm_manual.o \
 ./Core/Src/fsm_mode.o \
 ./Core/Src/global.o \
 ./Core/Src/i2c_lcd.o \
@@ -43,6 +45,7 @@ C_DEPS += \
 ./Core/Src/control_traffic.d \
 ./Core/Src/fsm_automatic.d \
 ./Core/Src/fsm_lcd.d \
+./Core/Src/fsm_manual.d \
 ./Core/Src/fsm_mode.d \
 ./Core/Src/global.d \
 ./Core/Src/i2c_lcd.d \

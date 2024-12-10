@@ -22,9 +22,10 @@
 #define AUTO_GREEN 12
 #define AUTO_YELLOW 13
 
-#define MAN_RED 21
-#define MAN_GREEN 22
-#define MAN_YELLOW 23
+#define RED_GREEN 21
+#define RED_YELLOW 22
+#define GREEN_RED 23
+#define YELLOW_RED 24
 
 extern int statusMode;
 
