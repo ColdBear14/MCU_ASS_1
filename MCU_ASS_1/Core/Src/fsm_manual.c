@@ -7,7 +7,7 @@
 
 #include "fsm_manual.h"
 
-int status_manual;
+int status_manual = 0;
 
 void status_manual_mode(){
 	if(status_A == AUTO_RED && status_B == AUTO_GREEN){
@@ -50,6 +50,7 @@ void fsm_manual_run(){
 			setTimer(1, 1000);
 			count_Down_A = RED_timer;
 			count_Down_B = GREEN_timer;
+			status_manual=0;
 		}
 		displayTraffic();
 		break;
@@ -70,6 +71,7 @@ void fsm_manual_run(){
 			setTimer(1, 1000);
 			count_Down_A = RED_timer;
 			count_Down_B = YELLOW_timer;
+			status_manual=0;
 		}
 		displayTraffic();
 		break;
@@ -90,6 +92,7 @@ void fsm_manual_run(){
 			setTimer(1, 1000);
 			count_Down_A = GREEN_timer;
 			count_Down_B = RED_timer;
+			status_manual=0;
 		}
 		displayTraffic();
 		break;
@@ -110,6 +113,7 @@ void fsm_manual_run(){
 			setTimer(1, 1000);
 			count_Down_A = YELLOW_timer;
 			count_Down_B = RED_timer;
+			status_manual=0;
 		}
 		displayTraffic();
 		break;
