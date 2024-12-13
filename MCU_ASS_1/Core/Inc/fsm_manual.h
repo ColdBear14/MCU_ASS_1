@@ -13,7 +13,7 @@
 
 int status_manual;
 
-void status_manual_mode();
-void fsm_manual_run();
+extern void status_manual_mode();
+extern void fsm_manual_run();
 
 #endif /* INC_FSM_MANUAL_H_ */

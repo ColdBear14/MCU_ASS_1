@@ -3,5 +3,6 @@ control_traffic.c:23:6:clearStatus_B	4	static
 control_traffic.c:29:6:clearStatus	4	static
 control_traffic.c:38:6:displayTraffic	8	static
 control_traffic.c:67:6:statusModeTraffic	8	static
-control_traffic.c:83:6:statusTraffic_A	8	static
-control_traffic.c:96:6:statusTraffic_B	8	static
+control_traffic.c:83:6:statusManTraffic	4	static
+control_traffic.c:122:6:statusTraffic_A	8	static
+control_traffic.c:135:6:statusTraffic_B	8	static

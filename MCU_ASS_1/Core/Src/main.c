@@ -31,6 +31,7 @@
 #include "fsm_automatic.h"
 #include "fsm_mode.h"
 #include "fsm_lcd.h"
+#include "fsm_manual.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -121,6 +122,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 	  fsm_automatic_run();
 	  fsm_mode();
+	  fsm_manual_run();
 	  fsm_lcd_run();
   }
   /* USER CODE END 3 */

@@ -27,7 +27,8 @@ Core/Src/fsm_automatic.o: ../Core/Src/fsm_automatic.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/software_timer.h ../Core/Inc/control_traffic.h \
- ../Core/Inc/fsm_automatic.h ../Core/Inc/fsm_mode.h ../Core/Inc/i2c_lcd.h
+ ../Core/Inc/fsm_automatic.h ../Core/Inc/fsm_manual.h \
+ ../Core/Inc/fsm_mode.h ../Core/Inc/i2c_lcd.h
 
 ../Core/Inc/fsm_automatic.h:
 
@@ -94,6 +95,8 @@ Core/Src/fsm_automatic.o: ../Core/Src/fsm_automatic.c \
 ../Core/Inc/control_traffic.h:
 
 ../Core/Inc/fsm_automatic.h:
+
+../Core/Inc/fsm_manual.h:
 
 ../Core/Inc/fsm_mode.h:
 

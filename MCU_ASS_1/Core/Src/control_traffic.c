@@ -28,8 +28,8 @@ void clearStatus_B(){
 
 void clearStatus(){
 	status_RED_A = 0;
-		status_GREEN_A = 0;
-		status_YELLOW_A = 0;
+	status_GREEN_A = 0;
+	status_YELLOW_A = 0;
 	status_RED_B = 0;
 	status_GREEN_B = 0;
 	status_YELLOW_B = 0;
@@ -78,6 +78,45 @@ void statusModeTraffic(){
 		status_YELLOW_A=1;
 		status_YELLOW_B=1;
 	}
+}
+
+void statusManTraffic(){
+		switch (status_manual) {
+			case RED_GREEN:
+				status_RED_A =1;
+				status_GREEN_A=0;
+				status_YELLOW_A=0;
+				status_RED_B=0;
+				status_GREEN_B = 1;
+				status_YELLOW_B=0;
+				break;
+			case RED_YELLOW:
+				status_RED_A =1;
+				status_GREEN_A=0;
+				status_YELLOW_A=0;
+				status_RED_B=0;
+				status_GREEN_B = 0;
+				status_YELLOW_B=1;
+				break;
+			case GREEN_RED:
+				status_RED_A =0;
+				status_GREEN_A=1;
+				status_YELLOW_A=0;
+				status_RED_B=1;
+				status_GREEN_B =0;
+				status_YELLOW_B=0;
+				break;
+			case YELLOW_RED:
+				status_RED_A =0;
+				status_GREEN_A=0;
+				status_YELLOW_A=1;
+				status_RED_B=1;
+				status_GREEN_B = 0;
+				status_YELLOW_B=0;
+				break;
+			default:
+				break;
+		}
 }
 
 void statusTraffic_A(){

@@ -27,6 +27,10 @@ void fsm_mode(){
 			status_B = 0;
 			lcd_clear_display();
 		}
+		if(IsButtonPress(2) == 1){
+			status_manual = MAN;
+			lcd_clear_display();
+		}
 		break;
 	case MODE2:
 		statusModeTraffic();

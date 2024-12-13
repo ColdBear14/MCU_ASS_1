@@ -10,6 +10,7 @@
 
 #include "global.h"
 #include "fsm_automatic.h"
+#include  "fsm_manual.h"
 
 int status_RED_A;
 int status_GREEN_A;
@@ -25,6 +26,7 @@ void clearStatus();
 
 extern void displayTraffic();
 extern void statusModeTraffic();
+extern void statusManTraffic();
 extern void statusTraffic_A();
 extern void statusTraffic_B();
 
