@@ -28,6 +28,7 @@ void fsm_mode(){
 			lcd_clear_display();
 		}
 		if(IsButtonPress(2) == 1){
+			statusMode = MODE5;
 			status_manual = MAN;
 			lcd_clear_display();
 		}
@@ -84,6 +85,11 @@ void fsm_mode(){
 			temp=0;
 		}
 		displayTraffic();
+		break;
+	case MODE5:
+		status_A=0;
+		status_B=0;
+
 		break;
 	default:
 		break;

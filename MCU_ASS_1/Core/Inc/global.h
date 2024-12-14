@@ -16,6 +16,7 @@
 #define MODE2 2
 #define MODE3 3
 #define MODE4 4
+#define MODE5 5
 
 #define AUTO 10
 #define AUTO_RED 11

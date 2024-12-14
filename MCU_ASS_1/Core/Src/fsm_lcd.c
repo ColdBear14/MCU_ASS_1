@@ -65,6 +65,8 @@ void fsm_lcd_run(){
 		lcd_send_string("DURATION:");
 		lcd_display_value(2, 10, YELLOW_timer + temp);
 		break;
+	case MODE5:
+		break;
 
 
 	default:

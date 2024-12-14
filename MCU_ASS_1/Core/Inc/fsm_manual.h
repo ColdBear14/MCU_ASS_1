@@ -10,7 +10,8 @@
 
 #include "global.h"
 #include "fsm_automatic.h"
-
+#include "i2c_lcd.h"
+#include "fsm_lcd.h"
 int status_manual;
 
 extern void status_manual_mode();
